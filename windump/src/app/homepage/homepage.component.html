@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>alesamcippa's windump</h1>
+</div>
+<div class="windows-versions">
+  <div class="windows-version-line">
+    <h2>DOS-Based Windows</h2>
+    <div class="version-line">
+      <span *ngFor="let version of lineOneVersions; let isLast=last">
+        <div class="centered-content">
+          <img [src]="version.imagePath" alt="{{version.name}} logo" class="logo"> <!-- Specific image for each version -->
+          {{ version.name }}<ng-container *ngIf="!isLast">,</ng-container>
+        </div>
+        <div>
+          <button (click)="showInfo(version.name)">Information</button>
+          <button (click)="showFiles(version.name)">Downloads</button>
+        </div>
+      </span>
+    </div>
+  </div>
+  <div class="windows-version-line">
+    <h2>NT-Based Windows</h2>
+    <div class="version-line">
+      <span *ngFor="let version of lineTwoVersions; let isLast=last">
+        <div class="centered-content">
+          <img [src]="version.imagePath" alt="{{version.name}} logo" class="logo"> <!-- Specific image for each version -->
+          {{ version.name }}<ng-container *ngIf="!isLast">,</ng-container>
+        </div>
+        <div>
+          <button (click)="showInfo(version.name)">Information</button>
+          <button (click)="showFiles(version.name)">Downloads</button>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
