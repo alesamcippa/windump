@@ -1,0 +1,19 @@
+<h1 class="dialog-title">Download Windows 3.x</h1>
+<div class="dialog-content">
+  <p><b><i>Select a file to download</i></b></p>
+  <p>The following files are available:</p>
+  <p>Windows 3.0 (German 5.25-1.2mb)</p>
+  <div class="button-box green">
+    <button class="download-button" (click)="downloadFile('Microsoft Windows 3.0 [German] (5.25-1.2mb).7z')">Microsoft Windows 3.0 (5.25-1.2mb).7z</button>
+  </div>
+  <p>Windows 3.0a (German 5.25-1.2mb)</p>
+  <div class="button-box green">
+    <button class="download-button" (click)="downloadFile('Microsoft Windows 3.0a [German] (5.25-1.2mb).7z')">Microsoft Windows 3.0a (5.25-1.2mb).7z</button>
+  </div>
+  <!-- Add more button-box divs for other files -->
+</div>
+<div class="dialog-actions">
+  <div class="button-box red">
+    <button class="cancel-button" (click)="onNoClick()">Cancel</button>
+  </div>
+</div>

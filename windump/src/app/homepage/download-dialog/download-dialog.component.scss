@@ -1,0 +1,33 @@
+.dialog-title {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .dialog-content, .dialog-actions {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .button-box {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .green {
+    background-color: #8BC34A;
+  }
+  
+  .red {
+    background-color: #F44336;
+  }
+  
+  .download-button, .cancel-button {
+    display: block;
+    margin: 10px auto;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }

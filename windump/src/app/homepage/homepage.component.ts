@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {NgForOf} from "@angular/common";
+import { MatDialog } from '@angular/material/dialog';
+import { DownloadDialogComponent } from './download-dialog/download-dialog.component';
 
 @Component({
   selector: 'app-homepage',
@@ -32,6 +34,8 @@ export class HomepageComponent {
     { name: 'Windows 11', imagePath: 'assets/images/Windows 11.png' }
   ];
 
+  constructor(private dialog: MatDialog) {}
+
   showInfo(version: string) {
     alert(`This is ${version}`);
   }
@@ -48,6 +52,9 @@ export class HomepageComponent {
         message = 'Do you really want to download Windows 2.03?\nFiletype: 3.5-720k Floppy\nLanguage: German\nAmstrad OEM';
         file = 'Microsoft Windows 2.03 (Amstrad OEM) [German] (3.5-720k).7z';
         break;
+      case 'Windows 3.x':
+        this.dialog.open(DownloadDialogComponent);
+        return;
       // Add more cases for other versions
       default:
         alert('File upload coming soon or file is not available at the moment.');
