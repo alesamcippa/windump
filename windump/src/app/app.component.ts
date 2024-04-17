@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MatDialogModule } from '@angular/material/dialog';
 import {HomepageComponent} from "./homepage/homepage.component";
 
 @Component({

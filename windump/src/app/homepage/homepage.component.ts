@@ -37,6 +37,36 @@ export class HomepageComponent {
   }
 
   showFiles(version: string) {
-    alert(`These are the files for ${version}`);
+    let message = '';
+    let file = '';
+    switch(version) {
+      case 'Windows 1.x':
+        message = 'Do you really want to download Windows 1.x?\nFiletype: 5.25 Floppy\nLanguage: English US';
+        file = 'Microsoft Windows 1.01 (5.25).7z';
+        break;
+      case 'Windows 2.x':
+        message = 'Do you really want to download Windows 2.03?\nFiletype: 3.5-720k Floppy\nLanguage: German\nAmstrad OEM';
+        file = 'Microsoft Windows 2.03 (Amstrad OEM) [German] (3.5-720k).7z';
+        break;
+      // Add more cases for other versions
+      default:
+        alert('File upload coming soon or file is not available at the moment.');
+        return;
+    }
+
+    const userConfirmation = confirm(message);
+    if (userConfirmation) {
+      this.downloadFile(file);
+    }
+  }
+
+  downloadFile(fileName: string) {
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', `/assets/downloads/${fileName}`);
+    link.setAttribute('download', fileName);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   }
 }

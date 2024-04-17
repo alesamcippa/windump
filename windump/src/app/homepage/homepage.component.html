@@ -7,7 +7,7 @@
     <div class="version-line">
       <span *ngFor="let version of lineOneVersions; let isLast=last">
         <div class="centered-content">
-          <img [src]="version.imagePath" alt="{{version.name}} logo" class="logo"> <!-- Specific image for each version -->
+          <img [src]="version.imagePath" alt="{{version.name}} logo" class="logo">
           {{ version.name }}<ng-container *ngIf="!isLast">,</ng-container>
         </div>
         <div>
@@ -22,7 +22,7 @@
     <div class="version-line">
       <span *ngFor="let version of lineTwoVersions; let isLast=last">
         <div class="centered-content">
-          <img [src]="version.imagePath" alt="{{version.name}} logo" class="logo"> <!-- Specific image for each version -->
+          <img [src]="version.imagePath" alt="{{version.name}} logo" class="logo">
           {{ version.name }}<ng-container *ngIf="!isLast">,</ng-container>
         </div>
         <div>
