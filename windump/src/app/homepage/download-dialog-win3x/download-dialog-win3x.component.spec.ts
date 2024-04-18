@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DownloadDialogComponent } from './download-dialog.component';
+import { DownloadDialogComponent } from './download-dialog-win3x.component';
 
 describe('DownloadDialogComponent', () => {
   let component: DownloadDialogComponent;

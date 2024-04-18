@@ -3,12 +3,12 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-download-dialog',
-  templateUrl: './download-dialog.component.html',
-  styleUrls: ['./download-dialog.component.scss']
+  templateUrl: './download-dialog-win3x.component.html',
+  styleUrls: ['./download-dialog-win3x.component.scss']
 })
-export class DownloadDialogComponent {
+export class DownloadDialogWin3xComponent {
   constructor(
-    public dialogRef: MatDialogRef<DownloadDialogComponent>,
+    public dialogRef: MatDialogRef<DownloadDialogWin3xComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {}
 
   onNoClick(): void {

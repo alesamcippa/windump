@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {NgForOf} from "@angular/common";
 import { MatDialog } from '@angular/material/dialog';
-import { DownloadDialogComponent } from './download-dialog/download-dialog.component';
+import { DownloadDialogWin3xComponent } from './download-dialog-win3x/download-dialog-win3x.component';
 
 @Component({
   selector: 'app-homepage',
@@ -53,7 +53,7 @@ export class HomepageComponent {
         file = 'Microsoft Windows 2.03 (Amstrad OEM) [German] (3.5-720k).7z';
         break;
       case 'Windows 3.x':
-        this.dialog.open(DownloadDialogComponent);
+        this.dialog.open(DownloadDialogWin3xComponent);
         return;
       // Add more cases for other versions
       default:
