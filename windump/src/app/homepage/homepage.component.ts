@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NgForOf} from "@angular/common";
 import { MatDialog } from '@angular/material/dialog';
 import { DownloadDialogWin3xComponent } from './download-dialog-win3x/download-dialog-win3x.component';
+import { DownloadDialogWin95Component } from './download-dialog-win95/download-dialog-win95.component';
 
 @Component({
   selector: 'app-homepage',
@@ -55,6 +56,9 @@ export class HomepageComponent {
       case 'Windows 3.x':
         this.dialog.open(DownloadDialogWin3xComponent);
         return;
+      case 'Windows 95':
+        this.dialog.open(DownloadDialogWin95Component);
+        return;  
       // Add more cases for other versions
       default:
         alert('File upload coming soon or file is not available at the moment.');
